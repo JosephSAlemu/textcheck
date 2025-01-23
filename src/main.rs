@@ -9,10 +9,10 @@ fn main() {
     println!("Enter the other codes output"); 
     let other_output: Vec<String> = read_lines();
     
-    println!("Let's compare (In rust btw)");
+    println!("Let's compare (In rust btw)\n");
   
     match output.len() == other_output.len(){
-	false => continue,
+	false => { println!("{}", "Yo bro your text is the wrong size, try again konginator\n".red()); continue},
 	true  => { for i in 0..output.len() {
 		     match output[i] == other_output[i]{ 
 			false => println!("{}", output[i].red()),			
